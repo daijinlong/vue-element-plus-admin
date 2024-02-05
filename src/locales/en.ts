@@ -331,7 +331,8 @@ export default {
     upload: 'Upload',
     // 用户头像
     userAvatar: 'User avatar',
-    iconPicker: 'Icon picker'
+    iconPicker: 'Icon picker',
+    qiangShengArt: 'QiangSheng Art'
   },
   guideDemo: {
     guide: 'Guide',
@@ -461,7 +462,8 @@ export default {
     preview: 'Preview',
     showOrHiddenSortable: 'Show or hidden sortable',
     videoPreview: 'Video preview',
-    cardTable: 'Card table'
+    cardTable: 'Card table',
+    qiangSheng: '强盛'
   },
   richText: {
     richText: 'Rich text',
@@ -560,5 +562,18 @@ export default {
   inputPasswordDemo: {
     title: 'InputPassword',
     inputPasswordDes: 'Secondary packaging of Input components based on ElementPlus'
+  },
+  qiangSheng: {
+    inputQiangShengAccount: 'QiangSheng Login Account',
+    inputQiangShengPassword: 'QiangSheng Login Password',
+    inputQiangShengToken: 'QiangSheng Token',
+    token: 'token',
+    orAccountAndPwd: 'or input QiangSheng Account&Password',
+    title: 'title',
+    price: 'price',
+    num: 'number',
+    total: 'total',
+    extract: 'extract',
+    extractMessage: 'extract product value, according to the floot price'
   }
 }

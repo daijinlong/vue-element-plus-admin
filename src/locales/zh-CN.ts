@@ -180,7 +180,10 @@ export default {
     imageCropping: '图片裁剪',
     videoPlayer: '视频播放器',
     tableVideoPreview: '表格视频预览',
-    cardTable: '卡片表格'
+    cardTable: '卡片表格',
+    qiangSheng: '强盛',
+    extractValue: '仓库价值',
+    extractValueHistory: '历史仓库价值'
   },
   permission: {
     hasPermission: '请设置操作权限值'
@@ -324,7 +327,8 @@ export default {
     lazyLoad: '懒加载',
     upload: '上传',
     userAvatar: '用户头像',
-    iconPicker: '图标选择器'
+    iconPicker: '图标选择器',
+    qiangShengArt: '强盛数藏'
   },
   guideDemo: {
     guide: '引导页',
@@ -550,5 +554,18 @@ export default {
   inputPasswordDemo: {
     title: '密码输入框',
     inputPasswordDes: '基于 ElementPlus 的 Input 组件二次封装'
+  },
+  qiangSheng: {
+    inputQiangShengAccount: '输入强盛登录账号',
+    inputQiangShengPassword: '输入强盛登录密码',
+    inputQiangShengToken: '输入强盛token',
+    token: 'token',
+    orAccountAndPwd: '或者 输入强盛账号密码',
+    title: '名称',
+    price: '地板价',
+    num: '数量',
+    total: '总价',
+    extract: '仓库',
+    extractMessage: '仓库藏品数量&地板价'
   }
 }

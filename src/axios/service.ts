@@ -6,6 +6,7 @@ import { ElMessage } from 'element-plus'
 import { REQUEST_TIMEOUT } from '@/constants'
 
 export const PATH_URL = import.meta.env.VITE_API_BASE_PATH
+export const IS_MOCK = !PATH_URL.includes('8088')
 
 const abortControllerMap: Map<string, AbortController> = new Map()
 

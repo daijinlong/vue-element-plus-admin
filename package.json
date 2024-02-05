@@ -60,6 +60,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
+    "@faker-js/faker": "^8.4.0",
     "@iconify/json": "^2.2.166",
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@types/fs-extra": "^11.0.4",

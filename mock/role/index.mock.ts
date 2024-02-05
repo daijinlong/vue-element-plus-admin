@@ -39,6 +39,38 @@ const adminList = [
     ]
   },
   {
+    path: '/qiangsheng',
+    component: '#',
+    redirect: '/qiangsheng/extract-value',
+    name: 'QiangSheng',
+    meta: {
+      title: 'router.qiangSheng',
+      icon: 'ant-design:dashboard-filled',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'extract-value',
+        component: 'views/QiangSheng/ExtractValue',
+        name: 'ExtractValue',
+        meta: {
+          title: 'router.extractValue',
+          noCache: true,
+          affix: true
+        }
+      },
+      {
+        path: 'extract-value-historry',
+        component: 'views/QiangSheng/ExtractValueHistory',
+        name: 'ExtractValueHistory',
+        meta: {
+          title: 'router.extractValueHistory',
+          noCache: true
+        }
+      }
+    ]
+  },
+  {
     path: '/external-link',
     component: '#',
     meta: {},

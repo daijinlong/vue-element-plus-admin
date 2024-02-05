@@ -90,6 +90,38 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     ]
   },
   {
+    path: '/qiangsheng',
+    component: Layout,
+    redirect: '/qiangsheng/extract-value',
+    name: 'QiangSheng',
+    meta: {
+      title: t('router.qiangSheng'),
+      icon: 'ant-design:dashboard-filled',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'extract-value',
+        component: () => import('@/views/QiangSheng/ExtractValue.vue'),
+        name: 'ExtractValue',
+        meta: {
+          title: t('router.extractValue'),
+          noCache: true,
+          affix: true
+        }
+      },
+      {
+        path: 'extract-value-historry',
+        component: () => import('@/views/QiangSheng/ExtractValueHistory.vue'),
+        name: 'ExtractValueHistory',
+        meta: {
+          title: t('router.extractValueHistory'),
+          noCache: true
+        }
+      }
+    ]
+  },
+  {
     path: '/external-link',
     component: Layout,
     meta: {},
