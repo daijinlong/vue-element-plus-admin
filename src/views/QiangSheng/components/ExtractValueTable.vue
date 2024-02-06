@@ -52,6 +52,34 @@ const columns = reactive<TableColumn[]>([
     label: t('qiangSheng.total')
   }
 ])
+
+const getSummaries = (param) => {
+  console.log(param)
+  const { columns, data } = param
+  const sums: string[] = []
+
+  columns.forEach((column, index) => {
+    if (index === 0) {
+      sums[index] = t('common.summary')
+      return
+    }
+    const values = data.map((item) => Number(item[column.property]))
+    if (!values.every((value) => Number.isNaN(value)) && column.property === 'total') {
+      sums[index] = `${values.reduce((prev, curr) => {
+        const value = Number(curr)
+        if (!Number.isNaN(value)) {
+          return prev + curr
+        } else {
+          return prev
+        }
+      }, 0)}`
+    } else {
+      sums[index] = 'N/A'
+    }
+  })
+
+  return sums
+}
 </script>
 
 <template>
@@ -62,6 +90,8 @@ const columns = reactive<TableColumn[]>([
       :loading="loading"
       @register="tableRegister"
       @refresh="refresh"
+      :show-summary="true"
+      :summary-method="getSummaries"
     />
   </ContentWrap>
 </template>

@@ -49,7 +49,8 @@ export default {
     notSpace: '不能包含空格',
     notSpecialCharacters: '不能包含特殊字符',
     isEqual: '两次输入不一致',
-    setting: '设置'
+    setting: '设置',
+    summary: '合计'
   },
   lock: {
     lockScreen: '锁定屏幕',

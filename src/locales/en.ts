@@ -50,7 +50,8 @@ export default {
     notSpecialCharacters: 'Special characters are not allowed',
     isEqual: 'The two are not equal',
     // 列设置
-    setting: 'Setting'
+    setting: 'Setting',
+    summary: 'Summary'
   },
   lock: {
     lockScreen: 'Lock screen',
