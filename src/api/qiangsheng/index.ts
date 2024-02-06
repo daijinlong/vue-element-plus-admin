@@ -6,12 +6,12 @@ import type { AccountType } from './types'
 export const getExtractApi = (data: AccountType) => {
   if (IS_MOCK) {
     return request.post({
-      url: 'mock/qiangsheng/get_extract',
+      url: '/mock/qiangsheng/get_extract',
       data
     })
   } else {
     return request.post({
-      url: 'api/qiangsheng/get_extract',
+      url: '/api/qiangsheng/get_extract',
       data
     })
   }
