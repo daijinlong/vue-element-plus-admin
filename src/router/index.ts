@@ -109,15 +109,6 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
           noCache: true,
           affix: true
         }
-      },
-      {
-        path: 'extract-value-historry',
-        component: () => import('@/views/QiangSheng/ExtractValueHistory.vue'),
-        name: 'ExtractValueHistory',
-        meta: {
-          title: t('router.extractValueHistory'),
-          noCache: true
-        }
       }
     ]
   },

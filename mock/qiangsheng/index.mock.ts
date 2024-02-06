@@ -18,6 +18,44 @@ for (let i = 0; i < 5; i++) {
   })
 }
 
+const getExtractValueHistoryLineOption = () => {
+  // mock data
+  const titleText = faker.string.sample({ min: 5, max: 20 })
+  const xAxisData = [
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString(),
+    faker.date.anytime().toDateString()
+  ]
+  const legendData = ['extract']
+  const seriesData = {
+    extract: [
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 }),
+      faker.number.int({ min: 20, max: 200 })
+    ]
+  }
+
+  return { titleText, xAxisData, legendData, seriesData }
+}
+
 export default [
   // 仓库信息
   {
@@ -28,7 +66,9 @@ export default [
       return {
         code: SUCCESS_CODE,
         data: {
-          extract: List
+          token: faker.string.sample({ min: 5, max: 20 }),
+          extract: List,
+          history: getExtractValueHistoryLineOption()
         }
       }
     }

@@ -12,7 +12,8 @@ const { t } = useI18n()
 const props = defineProps({
   token: { type: String, default: () => '' },
   username: { type: String, default: () => '' },
-  password: { type: String, default: () => '' }
+  password: { type: String, default: () => '' },
+  onReceiveHistory: Function
 })
 
 const { tableRegister, tableMethods, tableState } = useTable({
@@ -23,6 +24,9 @@ const { tableRegister, tableMethods, tableState } = useTable({
       password: props.password
     }
     const res = await getExtractApi(accountType)
+    if (res.data.history && props.onReceiveHistory) {
+      props.onReceiveHistory(res.data.history)
+    }
 
     return {
       list: res.data.extract,

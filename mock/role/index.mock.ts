@@ -58,15 +58,6 @@ const adminList = [
           noCache: true,
           affix: true
         }
-      },
-      {
-        path: 'extract-value-historry',
-        component: 'views/QiangSheng/ExtractValueHistory',
-        name: 'ExtractValueHistory',
-        meta: {
-          title: 'router.extractValueHistory',
-          noCache: true
-        }
       }
     ]
   },

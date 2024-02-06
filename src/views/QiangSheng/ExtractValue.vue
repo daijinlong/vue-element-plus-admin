@@ -8,6 +8,10 @@ import { FormSchema } from '@/components/Form'
 import { BaseButton } from '@/components/Button'
 import { AccountType } from '@/api/qiangsheng/types'
 import { ExtractValueTable } from './components'
+import { ElCard } from 'element-plus'
+import { EChartsOption } from 'echarts'
+import { Echart } from '@/components/Echart'
+import { makeLineOption } from '@/constants/libs'
 
 const { t } = useI18n()
 
@@ -16,6 +20,7 @@ const { getFormData } = formMethods
 
 const loading = ref(false)
 let account = ref<AccountType | null>(null)
+const lineOption = ref<EChartsOption | null>(null)
 
 // 表单信息
 const schema = reactive<FormSchema[]>([
@@ -89,6 +94,11 @@ const queryExtract = async () => {
   console.log('queryExtract')
   account.value = await getFormData<AccountType>()
 }
+
+const onReceiveHistory = (lo) => {
+  console.log(lo)
+  lineOption.value = makeLineOption(lo.titleText, lo.xAxisData, lo.legendData, lo.seriesData)
+}
 </script>
 
 <template>
@@ -100,7 +110,11 @@ const queryExtract = async () => {
       :token="account.token"
       :username="account.username"
       :password="account.password"
+      :on-receive-history="onReceiveHistory"
     />
+    <ElCard v-if="lineOption != null" shadow="hover" class="mb-20px">
+      <Echart :options="(lineOption as EChartsOption)" :height="350" />
+    </ElCard>
   </div>
 </template>
 
