@@ -563,9 +563,9 @@ export default {
     token: 'token',
     orAccountAndPwd: '或者 输入强盛账号密码',
     title: '名称',
-    price: '地板价',
+    price: '当前地板价',
     num: '数量',
-    total: '总价',
+    total: '当前总价',
     extract: '仓库',
     extractMessage: '仓库藏品数量&地板价'
   }

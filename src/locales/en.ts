@@ -571,9 +571,9 @@ export default {
     token: 'token',
     orAccountAndPwd: 'or input QiangSheng Account&Password',
     title: 'title',
-    price: 'price',
+    price: 'current floor',
     num: 'number',
-    total: 'total',
+    total: 'current total',
     extract: 'extract',
     extractMessage: 'extract product value, according to the floot price'
   }
