@@ -21,7 +21,7 @@ for (let i = 0; i < 5; i++) {
 export default [
   // 仓库信息
   {
-    url: '/mock/qiangsheng/get_extract',
+    url: '/mock/qiangsheng/get_extract/',
     method: 'post',
     timeout,
     response: () => {
