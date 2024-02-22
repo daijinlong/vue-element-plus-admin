@@ -1,4 +1,5 @@
 import request from '@/axios'
+import { IS_MOCK } from '@/axios/service'
 import type { UserType } from './types'
 
 interface RoleParams {
@@ -6,11 +7,19 @@ interface RoleParams {
 }
 
 export const loginApi = (data: UserType): Promise<IResponse<UserType>> => {
-  return request.post({ url: '/mock/user/login', data })
+  if (IS_MOCK) {
+    return request.post({ url: '/mock/user/login', data })
+  } else {
+    return request.post({ url: '/api/user/login/', data })
+  }
 }
 
 export const loginOutApi = (): Promise<IResponse> => {
-  return request.get({ url: '/mock/user/loginOut' })
+  if (IS_MOCK) {
+    return request.get({ url: '/mock/user/loginOut' })
+  } else {
+    return request.get({ url: '/api/user/loginOut/' })
+  }
 }
 
 export const getUserListApi = ({ params }: AxiosConfig) => {
@@ -26,9 +35,17 @@ export const getUserListApi = ({ params }: AxiosConfig) => {
 export const getAdminRoleApi = (
   params: RoleParams
 ): Promise<IResponse<AppCustomRouteRecordRaw[]>> => {
-  return request.get({ url: '/mock/role/list', params })
+  if (IS_MOCK) {
+    return request.get({ url: '/mock/role/list', params })
+  } else {
+    return request.get({ url: '/api/user/role_list', params })
+  }
 }
 
 export const getTestRoleApi = (params: RoleParams): Promise<IResponse<string[]>> => {
-  return request.get({ url: '/mock/role/list2', params })
+  if (IS_MOCK) {
+    return request.get({ url: '/mock/role/list2', params })
+  } else {
+    return request.get({ url: '/api/user/role_list2', params })
+  }
 }
