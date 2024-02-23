@@ -125,7 +125,10 @@ export default {
     invalidPhone: '请输入正确的手机号码',
     invalidSmsCode: '请输入收到正确的验证码',
     resendCountDown: '秒后重新发送',
-    sendSmsCodeSucceed: '验证码已经发送'
+    sendSmsCodeSucceed: '验证码已经发送',
+    checkPwdFail: '两次密码不一致',
+    registerFail: '注册失败: ',
+    registerSucceed: '注册成功'
   },
   router: {
     login: '登录',

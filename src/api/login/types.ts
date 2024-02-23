@@ -13,3 +13,10 @@ export interface UserType {
 export interface SmsCodeParam {
   username: string
 }
+
+export interface UserRegisterType {
+  username: string
+  code: string
+  password: string
+  check_password: string
+}

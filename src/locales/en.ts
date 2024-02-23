@@ -127,7 +127,10 @@ export default {
     invalidPhone: 'Please input valid phone',
     invalidSmsCode: 'Please input valid sms code(6 number)',
     resendCountDown: 's resend sms code',
-    sendSmsCodeSucceed: 'Sms code has been send'
+    sendSmsCodeSucceed: 'Sms code has been send',
+    checkPwdFail: 'Check password fail',
+    registerFail: 'Register fail: ',
+    registerSucceed: 'Register succeed'
   },
   router: {
     login: 'Login',

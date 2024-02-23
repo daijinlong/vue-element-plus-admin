@@ -6,13 +6,16 @@ import { useForm } from '@/hooks/web/useForm'
 import { ElInput, FormRules, ElMessage } from 'element-plus'
 import { useValidator } from '@/hooks/web/useValidator'
 import { BaseButton } from '@/components/Button'
-import { getSmsCodeApi } from '@/api/login'
-import { SmsCodeParam } from '@/api/login/types'
+import { getSmsCodeApi, registerApi } from '@/api/login'
+import { SmsCodeParam, UserRegisterType } from '@/api/login/types'
+import { useUserStore } from '@/store/modules/user'
 
 const emit = defineEmits(['to-login'])
 
 const { formRegister, formMethods } = useForm()
 const { getFormData, getElFormExpose } = formMethods
+
+const userStore = useUserStore()
 
 const { t } = useI18n()
 
@@ -163,7 +166,24 @@ const loginRegister = async () => {
     if (valid) {
       try {
         loading.value = true
-        toLogin()
+
+        const formData = await getFormData<UserRegisterType>()
+        if (formData.password !== formData.check_password) {
+          ElMessage.error(t('login.checkPwdFail'))
+        } else {
+          // 去注册
+          const res = await registerApi(formData)
+          if (res.code == 20000) {
+            ElMessage.error(t('login.registerSucceed'))
+            userStore.setLoginInfo({
+              username: formData.username,
+              password: formData.password
+            })
+            toLogin() // 去登录
+          } else {
+            ElMessage.error(t('login.registerFail') + res.data.message)
+          }
+        }
       } finally {
         loading.value = false
       }

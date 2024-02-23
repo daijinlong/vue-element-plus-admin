@@ -1,6 +1,6 @@
 import request from '@/axios'
 import { IS_MOCK } from '@/axios/service'
-import type { UserType, SmsCodeParam } from './types'
+import type { UserType, SmsCodeParam, UserRegisterType } from './types'
 
 interface RoleParams {
   roleName: string
@@ -55,5 +55,13 @@ export const getSmsCodeApi = (data: SmsCodeParam) => {
     return request.post({ url: '/mock/user/get_sms_code', data })
   } else {
     return request.post({ url: '/api/user/get_sms_code/', data })
+  }
+}
+
+export const registerApi = (data: UserRegisterType) => {
+  if (IS_MOCK) {
+    return request.post({ url: '/mock/user/register', data })
+  } else {
+    return request.post({ url: '/api/user/register/', data })
   }
 }

@@ -107,5 +107,27 @@ export default [
         }
       }
     }
+  },
+  // 注册接口
+  {
+    url: '/mock/user/register',
+    method: 'post',
+    timeout,
+    response: ({ body }) => {
+      const data = body
+      let hasUser = false
+      for (const user of List) {
+        if (user.username === data.username) {
+          hasUser = true
+          break
+        }
+      }
+      return {
+        code: SUCCESS_CODE,
+        data: {
+          message: hasUser ? `${data.username} has already register` : 'register succeed'
+        }
+      }
+    }
   }
 ]
