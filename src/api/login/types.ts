@@ -9,3 +9,7 @@ export interface UserType {
   role: string
   roleId: string
 }
+
+export interface SmsCodeParam {
+  username: string
+}

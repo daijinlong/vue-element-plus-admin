@@ -17,6 +17,13 @@ const List: {
     permissions: ['*.*.*']
   },
   {
+    username: '13333333333',
+    password: '13333333333',
+    role: 'admin',
+    roleId: '1',
+    permissions: ['*.*.*']
+  },
+  {
     username: 'test',
     password: 'test',
     role: 'test',
@@ -84,6 +91,20 @@ export default [
       return {
         code: SUCCESS_CODE,
         data: null
+      }
+    }
+  },
+  // 获取验证码接口
+  {
+    url: '/mock/user/get_sms_code',
+    method: 'post',
+    timeout,
+    response: () => {
+      return {
+        code: SUCCESS_CODE,
+        data: {
+          message: 'succeed'
+        }
       }
     }
   }

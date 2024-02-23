@@ -110,7 +110,7 @@ export default {
   login: {
     welcome: 'Welcome to the system',
     message: 'Backstage management system',
-    username: 'Username',
+    username: 'Phone',
     password: 'Password',
     register: 'Register',
     checkPassword: 'Confirm password',
@@ -119,10 +119,15 @@ export default {
     remember: 'Remember me',
     hasUser: 'Existing account? Go to login',
     forgetPassword: 'Forget password',
-    usernamePlaceholder: 'Please input username',
+    usernamePlaceholder: 'Please input phone',
     passwordPlaceholder: 'Please input password',
     code: 'Verification code',
-    codePlaceholder: 'Please input verification code'
+    codePlaceholder: 'Please input verification code',
+    getCode: 'Send code',
+    invalidPhone: 'Please input valid phone',
+    invalidSmsCode: 'Please input valid sms code(6 number)',
+    resendCountDown: 's resend sms code',
+    sendSmsCodeSucceed: 'Sms code has been send'
   },
   router: {
     login: 'Login',
@@ -488,7 +493,7 @@ export default {
   descriptionsDemo: {
     descriptions: 'Descriptions',
     descriptionsDes: 'Secondary packaging of Descriptions components based on ElementPlus',
-    username: 'Username',
+    username: 'Phone',
     nickName: 'NickName',
     phone: 'Phone',
     email: 'Email',
@@ -515,7 +520,7 @@ export default {
       'Because it is simulated data, only two accounts with different permissions are provided, which can be modified and combined by developers according to the actual situation.',
     index: 'Index',
     action: 'Action',
-    username: 'Username',
+    username: 'Phone',
     password: 'Password',
     role: 'Role',
     remark: 'Remark',

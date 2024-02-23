@@ -51,10 +51,39 @@ export const useValidator = () => {
     }
   }
 
+  const phoneValidator = (message?: string): FormItemRule => {
+    return {
+      validator: (_, val, callback) => {
+        // /^1[3-9]\d{9}$/
+        const reg = /^1[3|4|5|6|7|8|9][0-9]\d{8}(,1[3|4|5|6|7|8|9][0-9]\d{8})*$/
+        if (!reg.test(val)) {
+          callback(new Error(message || t('common.invalidPhone')))
+        } else {
+          callback()
+        }
+      }
+    }
+  }
+
+  const smsCodeValidator = (message?: string): FormItemRule => {
+    return {
+      validator: (_, val, callback) => {
+        const reg = /^\d{6}$/
+        if (!reg.test(val)) {
+          callback(new Error(message || t('common.invalidSmsCode')))
+        } else {
+          callback()
+        }
+      }
+    }
+  }
+
   return {
     required,
     lengthRange,
     notSpace,
-    notSpecialCharacters
+    notSpecialCharacters,
+    phoneValidator,
+    smsCodeValidator
   }
 }
