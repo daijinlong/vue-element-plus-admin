@@ -62,6 +62,29 @@ const adminList = [
     ]
   },
   {
+    path: '/wanli',
+    component: '#',
+    redirect: '/wanli/extract-value',
+    name: 'WanLi',
+    meta: {
+      title: 'router.wanLi',
+      icon: 'ant-design:dashboard-filled',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'extract-value',
+        component: 'views/WanLi/ExtractValue',
+        name: 'ExtractValue',
+        meta: {
+          title: 'router.extractValue',
+          noCache: true,
+          affix: true
+        }
+      }
+    ]
+  },
+  {
     path: '/external-link',
     component: '#',
     meta: {},

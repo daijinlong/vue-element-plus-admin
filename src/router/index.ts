@@ -113,6 +113,29 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     ]
   },
   {
+    path: '/wanli',
+    component: Layout,
+    redirect: '/wanli/extract-value',
+    name: 'WanLi',
+    meta: {
+      title: t('router.wanLi'),
+      icon: 'ant-design:dashboard-filled',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'extract-value',
+        component: () => import('@/views/WanLi/ExtractValue.vue'),
+        name: 'ExtractValue',
+        meta: {
+          title: t('router.extractValue'),
+          noCache: true,
+          affix: true
+        }
+      }
+    ]
+  },
+  {
     path: '/external-link',
     component: Layout,
     meta: {},

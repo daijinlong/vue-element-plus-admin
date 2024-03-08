@@ -193,7 +193,11 @@ export default {
     videoPlayer: 'Video player',
     // 表格视频预览
     tableVideoPreview: 'Table video preview',
-    cardTable: 'Card table'
+    cardTable: 'Card table',
+    qiangSheng: 'QiangSheng',
+    wanLi: 'WanLi(Ant)',
+    extractValue: 'ExtractValue',
+    extractValueHistory: 'ExtractValueHistory'
   },
   permission: {
     hasPermission: 'Please set the operation permission value'
@@ -341,7 +345,8 @@ export default {
     // 用户头像
     userAvatar: 'User avatar',
     iconPicker: 'Icon picker',
-    qiangShengArt: 'QiangSheng Art'
+    qiangShengArt: 'QiangSheng Art',
+    wanLiArt: 'WanLi(Ant) Art'
   },
   guideDemo: {
     guide: 'Guide',
@@ -576,6 +581,19 @@ export default {
     inputQiangShengAccount: 'QiangSheng Login Account',
     inputQiangShengPassword: 'QiangSheng Login Password',
     inputQiangShengToken: 'QiangSheng Token',
+    token: 'token',
+    orAccountAndPwd: 'or input QiangSheng Account&Password',
+    title: 'title',
+    price: 'current floor',
+    num: 'number',
+    total: 'current total',
+    extract: 'extract',
+    extractMessage: 'extract product value, according to the floot price'
+  },
+  wanLi: {
+    inputAccount: 'QiangSheng Login Account',
+    inputPassword: 'QiangSheng Login Password',
+    inputToken: 'QiangSheng Token',
     token: 'token',
     orAccountAndPwd: 'or input QiangSheng Account&Password',
     title: 'title',
