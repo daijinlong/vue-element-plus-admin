@@ -92,7 +92,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
   {
     path: '/qiangsheng',
     component: Layout,
-    redirect: '/qiangsheng/extract-value',
+    redirect: '/qiangsheng/qs-extract-value',
     name: 'QiangSheng',
     meta: {
       title: t('router.qiangSheng'),
@@ -101,7 +101,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     },
     children: [
       {
-        path: 'extract-value',
+        path: 'qs-extract-value',
         component: () => import('@/views/QiangSheng/ExtractValue.vue'),
         name: 'ExtractValue',
         meta: {
@@ -115,7 +115,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
   {
     path: '/wanli',
     component: Layout,
-    redirect: '/wanli/extract-value',
+    redirect: '/wanli/wl-extract-value',
     name: 'WanLi',
     meta: {
       title: t('router.wanLi'),
@@ -124,7 +124,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     },
     children: [
       {
-        path: 'extract-value',
+        path: 'wl-extract-value',
         component: () => import('@/views/WanLi/ExtractValue.vue'),
         name: 'ExtractValue',
         meta: {

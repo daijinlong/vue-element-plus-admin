@@ -41,7 +41,7 @@ const adminList = [
   {
     path: '/qiangsheng',
     component: '#',
-    redirect: '/qiangsheng/extract-value',
+    redirect: '/qiangsheng/qs-extract-value',
     name: 'QiangSheng',
     meta: {
       title: 'router.qiangSheng',
@@ -50,9 +50,9 @@ const adminList = [
     },
     children: [
       {
-        path: 'extract-value',
+        path: 'qs-extract-value',
         component: 'views/QiangSheng/ExtractValue',
-        name: 'ExtractValue',
+        name: 'QsExtractValue',
         meta: {
           title: 'router.extractValue',
           noCache: true,
@@ -64,7 +64,7 @@ const adminList = [
   {
     path: '/wanli',
     component: '#',
-    redirect: '/wanli/extract-value',
+    redirect: '/wanli/wl-extract-value',
     name: 'WanLi',
     meta: {
       title: 'router.wanLi',
@@ -73,9 +73,9 @@ const adminList = [
     },
     children: [
       {
-        path: 'extract-value',
+        path: 'wl-extract-value',
         component: 'views/WanLi/ExtractValue',
-        name: 'ExtractValue',
+        name: 'WlExtractValue',
         meta: {
           title: 'router.extractValue',
           noCache: true,
