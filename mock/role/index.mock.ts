@@ -54,7 +54,7 @@ const adminList = [
         component: 'views/QiangSheng/ExtractValue',
         name: 'QsExtractValue',
         meta: {
-          title: 'router.extractValue',
+          title: 'router.qiangSheng',
           noCache: true,
           affix: true
         }
@@ -67,7 +67,7 @@ const adminList = [
     redirect: '/wanli/wl-extract-value',
     name: 'WanLi',
     meta: {
-      title: 'router.wanLi',
+      title: 'router.ant',
       icon: 'ant-design:dashboard-filled',
       alwaysShow: true
     },
@@ -77,7 +77,17 @@ const adminList = [
         component: 'views/WanLi/ExtractValue',
         name: 'WlExtractValue',
         meta: {
-          title: 'router.extractValue',
+          title: 'router.wanLi',
+          noCache: true,
+          affix: true
+        }
+      },
+      {
+        path: 'xingqiu-extract-value',
+        component: 'views/XingQiu/ExtractValue',
+        name: 'XqExtractValue',
+        meta: {
+          title: 'router.xingQiu',
           noCache: true,
           affix: true
         }

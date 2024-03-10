@@ -194,8 +194,10 @@ export default {
     // 表格视频预览
     tableVideoPreview: 'Table video preview',
     cardTable: 'Card table',
-    qiangSheng: 'QiangSheng',
-    wanLi: 'WanLi(Ant)',
+    qiangSheng: 'QiangSheng Art',
+    ant: 'Ant',
+    wanLi: 'WanLi(Ant) Art',
+    xingQiu: 'XingQiu Art',
     extractValue: 'ExtractValue',
     extractValueHistory: 'ExtractValueHistory'
   },
@@ -346,7 +348,8 @@ export default {
     userAvatar: 'User avatar',
     iconPicker: 'Icon picker',
     qiangShengArt: 'QiangSheng Art',
-    wanLiArt: 'WanLi(Ant) Art'
+    wanLiArt: 'WanLi(Ant) Art',
+    xingQiuArt: 'XingQiu Art'
   },
   guideDemo: {
     guide: 'Guide',
@@ -591,11 +594,24 @@ export default {
     extractMessage: 'extract product value, according to the floot price'
   },
   wanLi: {
-    inputAccount: 'QiangSheng Login Account',
-    inputPassword: 'QiangSheng Login Password',
-    inputToken: 'QiangSheng Token',
+    inputAccount: 'WanLi Login Account',
+    inputPassword: 'WanLi Login Password',
+    inputToken: 'WanLi Token',
     token: 'token',
-    orAccountAndPwd: 'or input QiangSheng Account&Password',
+    orAccountAndPwd: 'or input WanLi Account&Password',
+    title: 'title',
+    price: 'current floor',
+    num: 'number',
+    total: 'current total',
+    extract: 'extract',
+    extractMessage: 'extract product value, according to the floot price'
+  },
+  xingQiu: {
+    inputAccount: 'XingQiu Login Account',
+    inputPassword: 'XingQiu Login Password',
+    inputToken: 'XingQiu Token',
+    token: 'token',
+    orAccountAndPwd: 'or input XingQiu Account&Password',
     title: 'title',
     price: 'current floor',
     num: 'number',

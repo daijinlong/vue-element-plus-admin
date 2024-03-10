@@ -103,7 +103,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'qs-extract-value',
         component: () => import('@/views/QiangSheng/ExtractValue.vue'),
-        name: 'ExtractValue',
+        name: 'QsExtractValue',
         meta: {
           title: t('router.extractValue'),
           noCache: true,
@@ -118,7 +118,7 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
     redirect: '/wanli/wl-extract-value',
     name: 'WanLi',
     meta: {
-      title: t('router.wanLi'),
+      title: t('router.ant'),
       icon: 'ant-design:dashboard-filled',
       alwaysShow: true
     },
@@ -126,9 +126,19 @@ export const asyncRouterMap: AppRouteRecordRaw[] = [
       {
         path: 'wl-extract-value',
         component: () => import('@/views/WanLi/ExtractValue.vue'),
-        name: 'ExtractValue',
+        name: 'WlExtractValue',
         meta: {
-          title: t('router.extractValue'),
+          title: t('router.wanLi'),
+          noCache: true,
+          affix: true
+        }
+      },
+      {
+        path: 'xq-extract-value',
+        component: () => import('@/views/XingQiu/ExtractValue.vue'),
+        name: 'XqExtractValue',
+        meta: {
+          title: t('router.xingQiu'),
           noCache: true,
           affix: true
         }

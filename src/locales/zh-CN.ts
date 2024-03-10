@@ -190,8 +190,10 @@ export default {
     videoPlayer: '视频播放器',
     tableVideoPreview: '表格视频预览',
     cardTable: '卡片表格',
-    qiangSheng: '强盛',
-    wanLi: '万里(蚂蚁)',
+    qiangSheng: '强盛数藏',
+    ant: '蚂蚁系',
+    wanLi: '万里(蚂蚁)数藏',
+    xingQiu: '星球文创',
     extractValue: '仓库价值',
     extractValueHistory: '历史仓库价值'
   },
@@ -339,7 +341,8 @@ export default {
     userAvatar: '用户头像',
     iconPicker: '图标选择器',
     qiangShengArt: '强盛数藏',
-    wanLiArt: '万里数藏(蚂蚁数藏)'
+    wanLiArt: '万里数藏(蚂蚁数藏)',
+    xingQiuArt: '星球文创'
   },
   guideDemo: {
     guide: '引导页',
@@ -585,6 +588,19 @@ export default {
     inputToken: '输入万里token',
     token: 'token',
     orAccountAndPwd: '或者 输入万里账号密码',
+    title: '名称',
+    price: '当前地板价',
+    num: '数量',
+    total: '当前总价',
+    extract: '仓库',
+    extractMessage: '仓库藏品数量&地板价'
+  },
+  xingQiu: {
+    inputAccount: '输入星球登录账号',
+    inputPassword: '输入星球登录密码',
+    inputToken: '输入星球token',
+    token: 'token',
+    orAccountAndPwd: '或者 输入星球账号密码',
     title: '名称',
     price: '当前地板价',
     num: '数量',
